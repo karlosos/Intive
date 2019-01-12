@@ -5,7 +5,7 @@ SQLite defined as data source which contains previosly calculated data.
 
 Tasks:
 *[x] Create database schema
-*[ ] Import salary data from csv to db
+*[x] Import salary data from csv to db
 
 Import with:
 sqlite> .separator ","
@@ -17,8 +17,8 @@ sqlite> .import salary.csv cognitive_salary
 Presentation of data from db in table form.
 
 Tasks:
-*[ ] Create view for presentation
-*[ ] Create template with table of worked years | salary
+*[x] Create view for presentation
+*[x] Create template with table of worked years | salary
 
 3. Main page
 =====================

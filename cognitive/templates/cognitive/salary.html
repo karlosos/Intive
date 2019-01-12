@@ -1,0 +1,20 @@
+{% load static %}
+
+{% if salary_list %}
+    <table>
+        <thead>
+            <th>Worked years</th>
+            <th>Salary brutto</th>
+        </thead>
+        <tbody>
+    {% for entry in salary_list %}
+        <tr>
+            <td> {{ entry.worked_years }} </td>
+            <td> {{ entry.salary }} </td>
+        </tr>
+    {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>No data.</p>
+{% endif %}
