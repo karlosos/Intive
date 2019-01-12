@@ -7,6 +7,10 @@ Tasks:
 *[x] Create database schema
 *[ ] Import salary data from csv to db
 
+Import with:
+sqlite> .separator ","
+sqlite> .import salary.csv cognitive_salary
+
 2. Data presentation
 ======================
 
