@@ -1,0 +1,27 @@
+1. SQLite as data source
+=======================
+
+SQLite defined as data source which contains previosly calculated data. 
+
+Tasks:
+1. Create database schema
+2. Import salary data from csv to db
+
+2. Data presentation
+======================
+
+Presentation of data from db in table form.
+
+Tasks:
+1. Create view for presentation
+2. Create template with table of worked years | salary
+
+3. Main page
+=====================
+
+Data can be accesed from the menu.
+
+Tasks:
+1. Create index view
+2. Create index template
+3. Create menu template
