@@ -1,3 +1,9 @@
 from django.db import models
 
-# Create your models here.
+
+class Salary(models.Model):
+    worked_years = models.FloatField()
+    salary = models.FloatField()
+
+    def __str__(self):
+        return str(self.worked_years) + " " + str(self.salary)
