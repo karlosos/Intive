@@ -4,6 +4,10 @@ from django.views import generic
 from .models import Salary
 
 
+class IndexView(generic.TemplateView):
+    template_name = 'cognitive/index.html'
+
+
 class SalaryView(generic.ListView):
     template_name = 'cognitive/salary.html'
     context_object_name = 'salary_list'

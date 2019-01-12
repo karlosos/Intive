@@ -26,6 +26,6 @@ Tasks:
 Data can be accesed from the menu.
 
 Tasks:
-*[ ] Create index view
-*[ ] Create index template
-*[ ] Create menu template
+*[x] Create index view
+*[x] Create index template
+*[x] Create menu template

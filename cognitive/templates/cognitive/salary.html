@@ -1,7 +1,9 @@
-{% load static %}
+{% include "cognitive/header.html" %}
+
+<h1> Salary data </h1>
 
 {% if salary_list %}
-    <table>
+    <table class="table table-striped">
         <thead>
             <th>Worked years</th>
             <th>Salary brutto</th>
@@ -18,3 +20,5 @@
 {% else %}
     <p>No data.</p>
 {% endif %}
+
+{% include "cognitive/footer.html" %}
