@@ -1,7 +1,20 @@
 {% include "cognitive/header.html" %}
 
 <p>
-    Click <b>Salary data</b> on the menu to show data.
+    Click <b>Salary data</b> on the menu to show all data.
 </p>
+
+<form action="{% url 'cognitive:salary_filter' %}" method="get">
+    {% csrf_token %}
+    <label>Worked years range:</label> <br>
+    <input type="number" name="worked_years_start"> -
+    <input type="number" name="worked_years_stop">
+    <br>
+    <label>Salary brutto range</label> <br>
+    <input type="number" name="salary_brutto_start"> -
+    <input type="number" name="salary_brutto_stop">
+
+    <input type="submit">
+</form>
 
 {% include "cognitive/footer.html" %}
