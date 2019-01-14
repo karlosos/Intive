@@ -59,3 +59,9 @@ Used libraries
 3. pandas
 4. sklearn - linear regression
 
+What can be done
+=============================
+
+1. Write tests (especially for filtering)
+2. I don't like that salary_view and salary_filter_view are doing basically the same thing. There's redundancy
+
