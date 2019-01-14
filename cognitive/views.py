@@ -2,26 +2,24 @@ from django.shortcuts import render
 from django.views import generic
 from django.template import loader
 from django.http import HttpResponse
+from jchart import Chart
 
 from .models import Salary
+from cognitive import charts
 
 
 class IndexView(generic.TemplateView):
     template_name = 'cognitive/index.html'
 
 
-class SalaryView(generic.ListView):
-    template_name = 'cognitive/salary.html'
-    context_object_name = 'salary_list'
+def salary_view(request):
+    salary_list = Salary.objects.order_by('worked_years')
+    context = {'salary_list': salary_list, 'bar_chart': charts.BarChart(salary_list)}
 
-    def get_queryset(self):
-        """
-        Return the list of salaries
-        """
-        return Salary.objects.all()
+    return render(request, 'cognitive/salary.html', context)
 
 
-def SalaryFilterView(request):
+def salary_filter_view(request):
     salary_list = Salary.objects.order_by('worked_years')
 
     worked_years_start = request.GET['worked_years_start']
@@ -38,6 +36,7 @@ def SalaryFilterView(request):
     if salary_brutto_stop:
         salary_list = salary_list.filter(salary__lt=salary_brutto_stop)
 
-    context = {'salary_list': salary_list}
+    context = {'salary_list': salary_list, 'bar_chart': charts.BarChart(salary_list)}
+
     return render(request, 'cognitive/salary.html', context)
 
