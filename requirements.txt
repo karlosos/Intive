@@ -7,10 +7,6 @@ Tasks:
 *[x] Create database schema
 *[x] Import salary data from csv to db
 
-Import with:
-sqlite> .separator ","
-sqlite> .import salary.csv cognitive_salary
-
 2. Data presentation
 ======================
 
@@ -29,3 +25,23 @@ Tasks:
 *[x] Create index view
 *[x] Create index template
 *[x] Create menu template
+
+4. Filtering salaries
+=======================
+
+Create additional view which using POST show specified range of salaries.
+
+Tasks:
+*[x] Create html form
+*[x] Create filtering view
+
+5. Chart presentation
+========================
+
+Show data in form of chart. 
+
+Tasks:
+*[x] Install jchart
+*[x] Create chart class
+*[x] Pass chart to template in salary view and filtered salary view
+
