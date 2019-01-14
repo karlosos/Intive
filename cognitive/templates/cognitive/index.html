@@ -4,7 +4,7 @@
     Click <b>Salary data</b> on the menu to show all data.
 </p>
 
-<form action="{% url 'cognitive:salary_filter' %}" method="get">
+<form action="{% url 'cognitive:salary_filter' %}" method="post">
     {% csrf_token %}
     <label>Worked years range:</label> <br>
     <input type="number" name="worked_years_start"> -

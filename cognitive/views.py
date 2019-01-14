@@ -22,10 +22,10 @@ def salary_view(request):
 def salary_filter_view(request):
     salary_list = Salary.objects.order_by('worked_years')
 
-    worked_years_start = request.GET['worked_years_start']
-    worked_years_stop = request.GET['worked_years_stop']
-    salary_brutto_start = request.GET['salary_brutto_start']
-    salary_brutto_stop = request.GET['salary_brutto_stop']
+    worked_years_start = request.POST['worked_years_start']
+    worked_years_stop = request.POST['worked_years_stop']
+    salary_brutto_start = request.POST['salary_brutto_start']
+    salary_brutto_stop = request.POST['salary_brutto_stop']
 
     if worked_years_start:
         salary_list = salary_list.filter(worked_years__gt=worked_years_start)
