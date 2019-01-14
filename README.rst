@@ -64,4 +64,4 @@ What can be done
 
 1. Write tests (especially for filtering)
 2. I don't like that salary_view and salary_filter_view are doing basically the same thing. There's redundancy
-
+3. Deploy application to heroku
